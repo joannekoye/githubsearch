@@ -24,17 +24,26 @@ h1{
   background-color: black;
   color: white;
 }
-p{
+.lead{
   font-family: 'Ubuntu', sans-serif;
   color: black;
   font-size: 145%;
 }
+p{
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+}
+
 .col-md-12{
   padding-left: 30%;
   padding-right: 30%;
 }
+.social{
+  padding-left: 2%;
+  padding-right: 2%;
+}
 .btn{
-  padding: 10px;
+  padding-left: 10px;
 }
 a{
   color: white;

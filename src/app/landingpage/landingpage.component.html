@@ -2,13 +2,7 @@
 <app-navbar ></app-navbar>
 <div class="container-fluid">
   <div class='landing'>
-   
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  
   <h1>GitHubGo</h1>
   
   <p class="lead text-center">An app that lets you explore Github easily!</p>
@@ -22,21 +16,32 @@
             (keyup)="findProfile()">
           </div>
           <button class="btn btn-danger btn-sm" (click)="findProfile()"><a href="#profile"> Search </a></button>
-          
-        
         </form>
         <br>
-        <p>Created by: </p><br>
-        <p>Joan Nekoye</p><br>
-        <img src="https://avatars0.githubusercontent.com/u/60555977?s=460&u=db8c7f573b4bba03435e9ab1c3b107e34ed98ab8&v=4" width="150" height="150">
+        
+        
+              <p>Created by: </p>
+        <p><a href="https://github.com/joannekoye"> Joan Nekoye <small>(@joannekoye)</small></a></p>
+        <a href="https://github.com/joannekoye?tab=repositories"><img src="https://avatars0.githubusercontent.com/u/60555977?s=460&u=db8c7f573b4bba03435e9ab1c3b107e34ed98ab8&v=4" width="100" height="100"><br>
       
-        <a href="https://github.com/joannekoye?tab=repositories">My Repositories</a>
+        View My Repositories</a>
+            </div>
+            
+              <div class="social">
+                <a href="https://web.facebook.com/nekoyejoan"><img src="https://getdrawings.com/free-icon-bw/white-facebook-icon-transparent-background-19.png" width="40" height="40"></a>
+              </div>
+              <div>
+                <a href="mailto:joannekoye@gmail.com"><img src="https://i.ya-webdesign.com/images/email-icon-white-png-5.png" width="50" height="50"></a>
+              </div>
+              
+        <br>
         <br>
         <br>
         <br>
         
         
-    </div>
+        
+    
   </div>
   </div>
   <div class="profilebody" id="profile">
@@ -49,7 +54,7 @@
           <div class="col-md-6">
             <div class="card">
             <div class = "card-body">
-              <img src="{{userInfo?.avatar_url}}" width="200" height="200" class="img-circle img-responsive" alt="Profile Picture">
+              <img src="{{userInfo?.avatar_url}}" width="200" height="200"  alt="Profile Picture">
             </div>
             <div class="card-footer">
               <span>Followers: {{userInfo?.followers}}   Following: {{userInfo?.following}}</span><br><br>
