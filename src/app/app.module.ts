@@ -13,6 +13,7 @@ import { ProfileinfoComponent} from './profileinfo/profileinfo.component'
 import { RepoinfoComponent } from './repoinfo/repoinfo.component';
 import { NavbarComponent } from './profileinfo/navbar.component';
 import { DatePipe } from './date.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DatePipe } from './date.pipe';
     RepoinfoComponent,
     AppComponent,
     NavbarComponent,
-    DatePipe
+    DatePipe,
+    HighlightDirective
   
   ],
   imports: [
