@@ -1,0 +1,41 @@
+.landing{
+  background-image: url(https://hackernoon.com/hn-images/1*wzEf4qVNT7mUeMIeQWTJbg.jpeg);
+  /* background-image: url(https://www.techworld.com/cmsdata/features/3665293/github_universe_thumb1200_4-3.png); */
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container-fluid{
+  background-color: black;
+  text-align: center;
+}
+
+h1{
+  font-family: 'Ubuntu Mono', monospace;
+  color: black;
+  font-size: 640%;
+}
+.card-body p{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: large;
+}
+.card {
+  background-color: black;
+  color: white;
+}
+p{
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+  font-size: 145%;
+}
+.col-md-12{
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.btn{
+  padding: 10px;
+}
+a{
+  color: white;
+}
