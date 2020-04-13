@@ -10,8 +10,6 @@ export class RepoinfoComponent implements OnInit {
 
   constructor(private githubRequestService : GithubRequestService ) {
     
-    let repoInfo= this.githubRequestService.getRepoInfo()
-    console.log(repoInfo)
 
    }
 

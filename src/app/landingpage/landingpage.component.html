@@ -1,18 +1,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Ubuntu+Mono&display=swap" rel="stylesheet">
-
+<app-navbar ></app-navbar>
 <div class="container-fluid">
+  <div class='landing'>
+   
   <br>
   <br>
   <br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <h1>GitHubGo!</h1>
-  <br>
+  <h1>GitHubGo</h1>
+  
   <p class="lead text-center">An app that lets you explore Github easily!</p>
   <br>
   <div class="row">
@@ -20,19 +18,62 @@
       
         <form>
           <div class="form-group">
-            <input class="form-control form-control-sm" type="text" placeholder="Github Username/Repo-name">
+            <input class="form-control" type="text" placeholder="Search Github..."[(ngModel)]="username" name="username"
+            (keyup)="findProfile()">
           </div>
+          <button class="btn btn-danger btn-sm" (click)="findProfile()"><a href="#profile"> Search </a></button>
+          
+        
         </form>
-      
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
     </div>
   </div>
+  </div>
+  <div class="profilebody" id="profile">
+    <div *ngIf='userInfo'class="card card-edit">
+      <div class="card-header">
+        <h3>{{userInfo?.login}}</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+            <div class = "card-body">
+              <img src="{{userInfo?.avatar_url}}" width="200" height="200" class="img-circle img-responsive" alt="Profile Picture">
+            </div>
+            <div class="card-footer">
+              <span>Followers: {{userInfo?.followers}}   Following: {{userInfo?.following}}</span><br><br>
+              <span>Date Created: {{userInfo?.created_at|date }}</span><br><br>
+              <span>Bio: {{userInfo?.bio}}</span>
+            </div>
+          </div>
+          </div>
+          <div class="col-md-6 scroll">
+            <div class="card">
+              <div class="card-header">
+                <h3>Repositories</h3>
+              </div>
+              <div class="card-body" *ngFor="let repo of repoInfo">
+                <p>
+                  <a href="{{repo.html_url}}">{{repo.name}}</a>
+                </p>
   
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div> 
+ 
+
+

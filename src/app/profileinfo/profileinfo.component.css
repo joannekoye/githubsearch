@@ -1,0 +1,18 @@
+.profileBody{
+  background-image: url(https://www.techworld.com/cmsdata/features/3665293/github_universe_thumb1200_4-3.png);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+h1{
+  color: rgb(224, 172, 40);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 900%;
+}
+p{
+  color: rgb(235, 232, 224);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 150%;
+}
