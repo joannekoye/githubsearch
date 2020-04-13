@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubRequestService } from '../landingpage/github-request.service'
 
 @Component({
   selector: 'app-repoinfo',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepoinfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private githubRequestService : GithubRequestService ) {
+    
+    let repoInfo= this.githubRequestService.getRepoInfo()
+    console.log(repoInfo)
+
+   }
 
   ngOnInit(): void {
   }

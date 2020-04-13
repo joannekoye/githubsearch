@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LandingpageComponent } from '../landingpage/landingpage.component'
+import { GithubRequestService } from '../landingpage/github-request.service'
 
 @Component({
   selector: 'app-profileinfo',
@@ -8,7 +8,14 @@ import { LandingpageComponent } from '../landingpage/landingpage.component'
 })
 export class ProfileinfoComponent implements OnInit {
 
-  constructor() { }
+  
+  constructor(private githubRequestService : GithubRequestService ) {
+  this.githubRequestService.getProfileInfo().subscribe(profile=>{
+    console.log(profile)
+  })
+    
+  }
+  
 
   ngOnInit(): void {
   }
